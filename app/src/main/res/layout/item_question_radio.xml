@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	 xmlns:app="http://schemas.android.com/apk/res-auto"
+	 xmlns:tools="http://schemas.android.com/tools"
+	 android:layout_width="match_parent"
+	 android:layout_height="wrap_content"
+	 android:layout_margin="@dimen/layout_margin_10dp"
+	 app:cardCornerRadius="@dimen/cardCornerRadius_5dp"
+	 app:cardElevation="@dimen/cardElevation_6dp"
+	 app:cardMaxElevation="@dimen/cardMaxElevation_16dp"
+	 app:contentPadding="@dimen/cardContentPadding_10dp">
+
+	 <androidx.constraintlayout.widget.ConstraintLayout
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+
+		  <TextView
+			   android:id="@+id/txtTitle_ItemQuestionRadio"
+			   android:layout_width="@dimen/layout_zero"
+			   android:layout_height="wrap_content"
+			   android:layout_marginStart="@dimen/layout_margin_8dp"
+			   android:layout_marginTop="@dimen/layout_margin_8dp"
+			   android:layout_marginEnd="@dimen/layout_margin_8dp"
+			   android:text="@string/title_question"
+			   android:textColor="@color/h1_text"
+			   android:textStyle="bold"
+			   app:layout_constraintEnd_toEndOf="parent"
+			   app:layout_constraintStart_toStartOf="parent"
+			   app:layout_constraintTop_toTopOf="parent" />
+
+		  <ImageView
+			   android:id="@+id/img_ItemQuestionRadio"
+			   android:layout_width="@dimen/layout_zero"
+			   android:layout_height="@dimen/layout_height_150dp"
+			   android:layout_marginTop="@dimen/layout_margin_8dp"
+			   app:layout_constraintEnd_toEndOf="@+id/txtTitle_ItemQuestionRadio"
+			   app:layout_constraintStart_toStartOf="@+id/txtTitle_ItemQuestionRadio"
+			   app:layout_constraintTop_toBottomOf="@+id/txtTitle_ItemQuestionRadio"
+			   app:srcCompat="@drawable/ic_logo"
+			   tools:ignore="ContentDescription" />
+
+		  <RadioGroup
+			   android:id="@+id/rG_ItemQuestionRadio"
+			   android:layout_width="@dimen/layout_zero"
+			   android:layout_height="wrap_content"
+			   android:layout_marginBottom="@dimen/layout_margin_8dp"
+			   android:gravity="center"
+			   android:orientation="horizontal"
+			   app:layout_constraintBottom_toBottomOf="parent"
+			   app:layout_constraintEnd_toEndOf="@+id/img_ItemQuestionRadio"
+			   app:layout_constraintStart_toStartOf="@+id/img_ItemQuestionRadio"
+			   app:layout_constraintTop_toBottomOf="@+id/img_ItemQuestionRadio">
+
+			   <RadioButton
+					android:id="@+id/rBtn_1_ItemQuestionRadio"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+
+			   <RadioButton
+					android:id="@+id/rBtn_2_ItemQuestionRadio"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+
+			   <RadioButton
+					android:id="@+id/rBtn_3_ItemQuestionRadio"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+		  </RadioGroup>
+
+	 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

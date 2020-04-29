@@ -1,0 +1,84 @@
+<resources>
+	 <string name="app_name">Quiz App</string>
+
+	<!-- Messages	 -->
+	 <string name="msg_answer_required">Answer required!\n Please Enter Answer.</string>
+	 <string name="msg_win">Congratulation</string>
+	 <string name="msg_lose">Try Again</string>
+	 <string name="game_status_win">You Are Win.</string>
+	 <string name="game_status_lose">You Are Lose.</string>
+	 <string name="msg_answer_all">The third section must be answered.</string>
+
+
+	<!--	Q1 -->
+	 <string name="q1_title">What is the last version of android ?</string>
+	 <string name="q1_answer_1">11</string>
+	 <string name="q1_answer_2">10</string>
+	 <string name="q1_answer_3">9</string>
+
+	 <!--	Q2 -->
+	 <string name="q2_title">When was the release of Android version 7.0 ?</string>
+	 <string name="q2_answer_1">2015</string>
+	 <string name="q2_answer_2">2016</string>
+	 <string name="q2_answer_3">2017</string>
+
+	 <!--	Q3 -->
+	 <string name="q3_title">What does languages Google have ?</string>
+	 <string name="q3_answer_1">C++</string>
+	 <string name="q3_answer_2">Android</string>
+	 <string name="q3_answer_3">Flutter</string>
+
+	 <!--	Q4 -->
+	 <string name="q4_title">"What is this name of this shape ?"</string>
+	 <string name="q4_answer_1">Triangle</string>
+	 <string name="q4_answer_2">Square</string>
+	 <string name="q4_answer_3">Rectangle</string>
+
+	 <!--	Q5 -->
+	 <string name="q5_title">"What is this name of this shape ?"</string>
+	 <string name="q5_answer_1">Triangle</string>
+	 <string name="q5_answer_2">Square</string>
+	 <string name="q5_answer_3">Rectangle</string>
+
+	 <!--	Q6 -->
+	 <string name="q6_title">"What is this name of this shape ?"</string>
+	 <string name="q6_answer_1">Triangle</string>
+	 <string name="q6_answer_2">Square</string>
+	 <string name="q6_answer_3">Rectangle</string>
+
+	 <!--	Q7 -->
+	 <string name="q7_title">What is the result of this calculation ?</string>
+	 <string name="q7_answer_1">0</string>
+	 <string name="q7_answer_2">0</string>
+	 <string name="q7_answer_3">0</string>
+
+	 <!--	Q8 -->
+	 <string name="q8_title">What is the result of this calculation ?</string>
+	 <string name="q8_answer_1">1</string>
+	 <string name="q8_answer_2">0</string>
+	 <string name="q8_answer_3">0</string>
+
+	 <!--	Q9 -->
+	 <string name="q9_title">What is the result of this calculation ?</string>
+	 <string name="q9_answer_1">2</string>
+	 <string name="q9_answer_2">0</string>
+	 <string name="q9_answer_3">0</string>
+	 <string name="title_question">Title Question</string>
+	 <string name="write_answer">Write Answer ....</string>
+	 <string name="enter">Enter</string>
+	 <string name="checkbox">CheckBox</string>
+	 <string name="welcome_to_quiz_app">welcome To Quiz App</string>
+	 <string name="write_your_name">Write Your Name</string>
+	 <string name="next">Next</string>
+	 <string name="right_answers">Right Answers</string>
+	 <string name="wrong_answers">Wrong Answers</string>
+	 <string name="section_one">Section One</string>
+	 <string name="section_two">Section Two</string>
+	 <string name="section_three">Section Three</string>
+	 <string name="score">Score</string>
+	 <string name="your_score">Your Score</string>
+	 <string name="play_again">Play Again</string>
+
+
+
+</resources>

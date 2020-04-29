@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	 <!--	 radius-->
+	 <dimen name="radius_100dp">100dp</dimen>
+	 <dimen name="radius_20dp">20dp</dimen>
+
+	 <!--	 card-->
+	 <dimen name="cardCornerRadius_5dp">5dp</dimen>
+	 <dimen name="cardElevation_6dp">6dp</dimen>
+	 <dimen name="cardMaxElevation_16dp">16dp</dimen>
+	 <dimen name="cardContentPadding_10dp">10dp</dimen>
+
+	<!--	 activity-->
+	 <dimen name="layout_margin_10dp">10dp</dimen>
+	 <dimen name="layout_margin_8dp">8dp</dimen>
+	 <dimen name="layout_marginTop_16dp">16dp</dimen>
+	 <dimen name="layout_marginStart_32dp">32dp</dimen>
+	 <dimen name="layout_margin_5dp">5dp</dimen>
+
+	 <dimen name="layout_zero">0dp</dimen>
+	 <dimen name="layout_height_150dp">150dp</dimen>
+	 <dimen name="layout_width_200dp">200dp</dimen>
+	 <dimen name="layout_width_2dp">2dp</dimen>
+	 <dimen name="layout_width_140dp">140dp</dimen>
+	 <dimen name="layout_width_20dp">20dp</dimen>
+
+	 <dimen name="layout_padding_10dp">10dp</dimen>
+
+	<!--	 fonts Size-->
+	 <dimen name="text_size_24sp">24sp</dimen>
+	 <dimen name="text_size_18sp">18sp</dimen>
+</resources>

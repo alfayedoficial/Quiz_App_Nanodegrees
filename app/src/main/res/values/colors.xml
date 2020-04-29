@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	 <color name="colorPrimary">#58a7ed</color>
+	 <color name="colorPrimaryDark">#9758ed</color>
+	 <color name="colorAccent">#8371ed</color>
+
+	<!-- Text Color	 -->
+	 <color name="welcome_txt">#9856ed</color>
+	 <color name="h1_text">#000000</color>
+	 <color name="h2_text">#aaa</color>
+	 <color name="h3_text">#aaa</color>
+	 <color name="right_text">#0D9C48</color>
+	 <color name="wrong_text">#982423</color>
+
+
+	 <color name="start_color">#56aaed</color>
+	 <color name="center_color">#7c7aed</color>
+	 <color name="end_color">#9856ed</color>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	 xmlns:app="http://schemas.android.com/apk/res-auto"
+	 xmlns:tools="http://schemas.android.com/tools"
+	 android:layout_width="match_parent"
+	 android:layout_height="wrap_content"
+	 android:layout_margin="@dimen/layout_margin_10dp"
+	 app:cardCornerRadius="@dimen/cardCornerRadius_5dp"
+	 app:cardElevation="@dimen/cardElevation_6dp"
+	 app:cardMaxElevation="@dimen/cardMaxElevation_16dp"
+	 app:contentPadding="@dimen/cardContentPadding_10dp">
+
+	 <androidx.constraintlayout.widget.ConstraintLayout
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+
+		  <TextView
+			   android:id="@+id/txtTitle_ItemQuestionCheck"
+			   android:layout_width="@dimen/layout_zero"
+			   android:layout_height="wrap_content"
+			   android:layout_marginStart="@dimen/layout_margin_8dp"
+			   android:layout_marginTop="@dimen/layout_margin_8dp"
+			   android:layout_marginEnd="@dimen/layout_margin_8dp"
+			   android:text="@string/title_question"
+			   android:textColor="@color/h1_text"
+			   android:textStyle="bold"
+			   app:layout_constraintEnd_toEndOf="parent"
+			   app:layout_constraintStart_toStartOf="parent"
+			   app:layout_constraintTop_toTopOf="parent" />
+
+		  <ImageView
+			   android:id="@+id/img_ItemQuestionCheck"
+			   android:layout_width="@dimen/layout_zero"
+			   android:layout_height="@dimen/layout_height_150dp"
+			   android:layout_marginTop="@dimen/layout_margin_8dp"
+			   app:layout_constraintEnd_toEndOf="@+id/txtTitle_ItemQuestionCheck"
+			   app:layout_constraintStart_toStartOf="@+id/txtTitle_ItemQuestionCheck"
+			   app:layout_constraintTop_toBottomOf="@+id/txtTitle_ItemQuestionCheck"
+			   app:srcCompat="@drawable/ic_logo"
+			   tools:ignore="ContentDescription" />
+
+		  <LinearLayout
+			   android:layout_width="@dimen/layout_zero"
+			   android:layout_height="wrap_content"
+			   android:layout_marginTop="@dimen/layout_margin_8dp"
+			   android:orientation="vertical"
+			   app:layout_constraintBottom_toBottomOf="parent"
+			   app:layout_constraintEnd_toEndOf="@+id/img_ItemQuestionCheck"
+			   app:layout_constraintStart_toStartOf="@+id/img_ItemQuestionCheck"
+			   app:layout_constraintTop_toBottomOf="@+id/img_ItemQuestionCheck">
+
+			   <CheckBox
+					android:id="@+id/cBox_1_ItemQuestionCheck"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="5dp"
+					android:layout_weight="1"
+					android:text="@string/checkbox" />
+
+			   <CheckBox
+					android:id="@+id/cBox_2_ItemQuestionCheck"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="5dp"
+					android:layout_weight="1"
+					android:text="@string/checkbox" />
+
+			   <CheckBox
+					android:id="@+id/cBox_3_ItemQuestionCheck"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="5dp"
+					android:layout_weight="1"
+					android:text="@string/checkbox" />
+		  </LinearLayout>
+
+	 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
