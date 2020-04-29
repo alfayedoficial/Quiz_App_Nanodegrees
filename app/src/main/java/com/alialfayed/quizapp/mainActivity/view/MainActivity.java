@@ -1,5 +1,6 @@
 package com.alialfayed.quizapp.mainActivity.view;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -21,10 +22,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import static com.alialfayed.quizapp.mainActivity.util.SaveSharedPreferences.answerQuestions;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public static int answerQuestions = 0;
 
     private Toolbar toolbar;
     private RecyclerView recyclerViewCheck;
@@ -54,6 +55,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //initialize Variables
         controlButton();
+
+        if (SaveSharedPreferences.getFirstOnce(this)){
+            rtlFirstScreen.setVisibility(View.GONE);
+            rtlSecondScreen.setVisibility(View.VISIBLE);
+        }else {
+            rtlFirstScreen.setVisibility(View.VISIBLE);
+            rtlSecondScreen.setVisibility(View.GONE);
+            rtlThirdScreen.setVisibility(View.GONE);
+        }
 
         inflateToolbar();
         inflateRecyclerViewCheck();
@@ -147,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (!nameUser.isEmpty()) {
                     rtlFirstScreen.setVisibility(View.GONE);
                     rtlSecondScreen.setVisibility(View.VISIBLE);
+                    SaveSharedPreferences.saveNameUser(nameUser, this);
                 } else {
                     textInputLayout_NameUser.setErrorEnabled(false);
                     textInputLayout_NameUser.setError(getText(R.string.msg_answer_required));
@@ -154,6 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 SaveSharedPreferences.saveCounterCorrect(0, this);
                 SaveSharedPreferences.saveCounterWrong(0, this);
+                SaveSharedPreferences.saveFirstOnce(true,this);
                 break;
 
             case R.id.btn_Score:
@@ -163,14 +175,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     int wrongAnswer = SaveSharedPreferences.getCounterWrong(this);
 
                     txtCorrectAnswer.setText(String.valueOf(correctAnswer));
-                    txtWongAnswer.setText(String.valueOf(correctAnswer));
-                    txtUserName.setText(nameUser);
+                    txtWongAnswer.setText(String.valueOf(wrongAnswer));
+                    txtUserName.setText(SaveSharedPreferences.getNameUser(this));
 
                     if (correctAnswer > wrongAnswer) {
                         txtStatusGame.setText(getText(R.string.game_status_win));
                         txtMessage.setText(getText(R.string.msg_win));
                         setResult(getText(R.string.msg_win).toString(), nameUser, getText(R.string.game_status_win).toString());
-                    } else {
+                    } else if (correctAnswer < wrongAnswer || correctAnswer == 0){
                         txtStatusGame.setText(getText(R.string.game_status_lose));
                         txtMessage.setText(getText(R.string.msg_lose));
                         setResult(getText(R.string.msg_lose).toString(), nameUser, getText(R.string.game_status_lose).toString());
@@ -186,11 +198,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_TryAgain:
 
-                rtlThirdScreen.setVisibility(View.GONE);
-                rtlSecondScreen.setVisibility(View.VISIBLE);
-
                 SaveSharedPreferences.saveCounterCorrect(0, this);
                 SaveSharedPreferences.saveCounterWrong(0, this);
+
+                Intent restartIntent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(restartIntent);
+
                 break;
 
         }
@@ -201,4 +214,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, massage + " " + nameUSer + "\n" + statusGame, Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        SaveSharedPreferences.saveFirstOnce(false,this);
+    }
 }

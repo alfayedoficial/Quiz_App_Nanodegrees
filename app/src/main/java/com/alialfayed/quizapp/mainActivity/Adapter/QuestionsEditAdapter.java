@@ -18,9 +18,10 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import static com.alialfayed.quizapp.mainActivity.util.SaveSharedPreferences.answerQuestions;
 import static com.alialfayed.quizapp.mainActivity.util.SaveSharedPreferences.counterCorrect;
 import static com.alialfayed.quizapp.mainActivity.util.SaveSharedPreferences.counterWrong;
+import static com.alialfayed.quizapp.mainActivity.view.MainActivity.answerQuestions;
+
 
 /**
  * Created by ( Eng Ali Al Fayed)
@@ -62,7 +63,6 @@ public class QuestionsEditAdapter extends RecyclerView.Adapter<QuestionsEditAdap
                         String answer = holder.eTxt.getText().toString();
 
                         if (!answer.isEmpty()) {
-
                             if (answer.equals(myObjectList.get(position).getRightAnswerString()[0])) {
                                 counterCorrect++;
                                 SaveSharedPreferences.saveCounterCorrect(counterCorrect, context);

@@ -9,21 +9,23 @@ import android.os.Handler;
 import com.alialfayed.quizapp.R;
 import com.alialfayed.quizapp.mainActivity.view.MainActivity;
 
+
 public class SplashActivity extends AppCompatActivity {
 
-    private static int TIME_HANDLER = 2500;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
         Handler handler = new Handler();
+        int timeHandler = 2500;
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(SplashActivity.this ,MainActivity.class );
                 startActivity(intent);
+                finish();
             }
-        },TIME_HANDLER);
+        }, timeHandler);
     }
 }
